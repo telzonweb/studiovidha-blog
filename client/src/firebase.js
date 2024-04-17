@@ -14,13 +14,12 @@ import { initializeApp } from "firebase/app";
 //   appId: "1:263072260951:web:f72857e99376b4add4d412",
 // };
 const firebaseConfig = {
-  apiKey: "AIzaSyBpwzYtJaPsAnSE4E2z0lpW0qAdjuWoLMc",
-  authDomain: "telzonsite.firebaseapp.com",
-  projectId: "telzonsite",
-  storageBucket: "telzonsite.appspot.com",
-  messagingSenderId: "195172179353",
-  appId: "1:195172179353:web:6a6f6b5d3ed3c5507a4708",
-  measurementId: "G-TV7D4FLMKQ",
+  apiKey: "AIzaSyCi2tbM0NnW6cS97NNnobboemtlLAVLKAI",
+  authDomain: "studiovidha-7ff2a.firebaseapp.com",
+  projectId: "studiovidha-7ff2a",
+  storageBucket: "studiovidha-7ff2a.appspot.com",
+  messagingSenderId: "772188025944",
+  appId: "1:772188025944:web:c7d5c019b273cf5cb8462d",
 };
 
 // Initialize Firebase
