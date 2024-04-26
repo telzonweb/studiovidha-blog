@@ -6,6 +6,7 @@ import cookieParser from "cookie-parser";
 import userRoutes from "./routes/user.route.js";
 import authRoutes from "./routes/auth.route.js";
 import postRoutes from "./routes/post.route.js";
+import formRoutes from "./routes/form.route.js";
 import commentRoutes from "./routes/comment.route.js";
 import morgan from "morgan";
 import cors from "cors";
@@ -26,7 +27,6 @@ const app = express();
 
 const allowedOrigins = [
   "https://studiovidha.vercel.app",
-
   "https://mern-blog-main-ruby.vercel.app",
   "http://localhost:5173",
   "http://localhost:3000",
@@ -79,6 +79,7 @@ app.use("/api/user", userRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/post", postRoutes);
 app.use("/api/comment", commentRoutes);
+app.use("/api/landing", formRoutes);
 
 app.use(express.static(path.join(__dirname, "/client/dist")));
 
