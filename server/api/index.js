@@ -34,24 +34,24 @@ const allowedOrigins = [
 ];
 
 // Set up CORS options
-const corsOptions = {
-  origin: function (origin, callback) {
-    if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
-  },
-  headers: {
-    "Access-Control-Allow-Headers":
-      "Origin, X-Requested-With, Content-Type, Accept",
-    "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
-    "Access-Control-Allow-Credentials": true, // Set to true if you want to allow credentials (cookies, authorization headers) to be sent in cross-origin requests
-  },
-};
+// const corsOptions = {
+//   origin: function (origin, callback) {
+//     if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
+//       callback(null, true);
+//     } else {
+//       callback(new Error("Not allowed by CORS"));
+//     }
+//   },
+//   headers: {
+//     "Access-Control-Allow-Headers":
+//       "Origin, X-Requested-With, Content-Type, Accept",
+//     "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
+//     "Access-Control-Allow-Credentials": true, // Set to true if you want to allow credentials (cookies, authorization headers) to be sent in cross-origin requests
+//   },
+// };
 
 // Enable CORS with options
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
 
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
@@ -67,6 +67,12 @@ app.use((req, res, next) => {
 //     credentials: true, // Allow cookies to be sent with cross-origin requests
 //   })
 // );
+app.use(
+  cors({
+    origin: "*",
+    credentials: true,
+  })
+);
 
 app.use(morgan("combined"));
 app.use(express.json());
