@@ -27,6 +27,7 @@ const app = express();
 
 const allowedOrigins = [
   "https://studiovidha.vercel.app",
+  "https://studiovidha.com",
   "https://mern-blog-main-ruby.vercel.app",
   "http://localhost:5173",
   "http://localhost:3000",
